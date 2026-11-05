@@ -1,0 +1,3 @@
+# Um e-mail por linha. Linhas com # são ignoradas.
+capymaximoff@gmail.com
+# professor2@unilago.edu.br

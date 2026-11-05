@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #05030a;
+  color: #e9e4f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* campo estelar */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(1.3px 1.3px at 18% 24%, rgba(255,255,255,.65), transparent),
+    radial-gradient(1px 1px at 62% 12%, rgba(255,255,255,.5), transparent),
+    radial-gradient(1.6px 1.6px at 84% 38%, rgba(255,255,255,.7), transparent),
+    radial-gradient(1px 1px at 36% 62%, rgba(255,255,255,.45), transparent),
+    radial-gradient(1.2px 1.2px at 74% 74%, rgba(255,255,255,.55), transparent),
+    radial-gradient(1px 1px at 12% 82%, rgba(255,255,255,.4), transparent),
+    radial-gradient(1.4px 1.4px at 92% 58%, rgba(255,255,255,.5), transparent),
+    radial-gradient(1px 1px at 48% 88%, rgba(255,255,255,.4), transparent);
+  background-size: 340px 300px, 280px 260px, 420px 380px, 320px 340px,
+                   260px 300px, 380px 320px, 300px 280px, 360px 360px;
+  opacity: .55;
+}
+
+/* halo central */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse 60% 55% at 50% 42%, rgba(90,40,160,.16), transparent 70%);
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+}
+
+.card {
+  width: 100%;
+  background: linear-gradient(180deg, #120a20 0%, #0c0616 100%);
+  border: 1px solid rgba(139,79,214,.28);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(120,60,190,.06),
+    0 24px 70px -20px rgba(90,30,170,.35),
+    0 0 60px -18px rgba(130,60,220,.25);
+}
+
+/* header roxo com listras diagonais */
+.card-head {
+  padding: 26px 20px;
+  display: flex;
+  justify-content: center;
+  background-image:
+    repeating-linear-gradient(135deg, rgba(255,255,255,.045) 0 2px, transparent 2px 9px),
+    linear-gradient(180deg, #55207f 0%, #3a1259 60%, #2c0d44 100%);
+  border-bottom: 1px solid rgba(150,80,230,.35);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.logo { width: 30px; height: 30px; flex: none; display: block; }
+
+.card-body {
+  padding: 30px 30px 32px;
+  text-align: center;
+}
+
+/* orbe com anel */
+.orb {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  margin: 4px auto 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, #7b39b3 0%, #4a1680 42%, #1c0830 78%, #0d0417 100%);
+  box-shadow:
+    inset 0 0 24px rgba(160,80,240,.5),
+    0 0 40px -6px rgba(120,50,200,.45);
+}
+
+.orb::before {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border: 1px solid rgba(168,110,255,.3);
+  border-radius: 50%;
+  transform: rotate(-20deg) scaleX(1.22);
+}
+
+.orb span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 10px 3px rgba(255,255,255,.7);
+  /* gira a bolinha ao redor do planeta, acompanhando a inclinação do anel */
+  animation: orbita 7s linear infinite;
+}
+
+@keyframes orbita {
+  from { transform: rotate(-20deg) scaleX(1.22) rotate(0deg) translateX(42px); }
+  to   { transform: rotate(-20deg) scaleX(1.22) rotate(360deg) translateX(42px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb span { animation: none; transform: rotate(-20deg) scaleX(1.22) translateX(42px); }
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #f3eefb;
+}
+
+.sub {
+  margin: 0 0 22px;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: #9b90b0;
+  letter-spacing: .2px;
+}
+
+.erro {
+  margin: 0 0 18px;
+  font-size: 12px;
+  letter-spacing: .3px;
+  color: #ff8fbf;
+  background: rgba(200,50,120,.1);
+  border: 1px solid rgba(255,110,170,.3);
+  border-radius: 6px;
+  padding: 9px 12px;
+}
+
+form { text-align: left; }
+
+.field { margin-bottom: 14px; }
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #8d80a6;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #fff;
+  background: #0a0513;
+  border: 1px solid rgba(139,79,214,.22);
+  border-radius: 6px;
+  transition: border-color .18s, box-shadow .18s, background .18s;
+}
+
+input::placeholder { color: #574c6e; }
+
+input:focus {
+  outline: none;
+  background: #0d0718;
+  border-color: rgba(178,116,255,.65);
+  box-shadow: 0 0 0 3px rgba(140,70,230,.14);
+}
+
+.btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(180deg, rgba(96,40,158,.35), rgba(62,20,110,.35));
+  border: 1px solid rgba(160,90,240,.55);
+  border-radius: 6px;
+  transition: background .18s, border-color .18s, box-shadow .18s;
+}
+
+.btn:hover {
+  background: linear-gradient(180deg, rgba(124,56,200,.55), rgba(84,30,148,.55));
+  border-color: rgba(190,130,255,.85);
+  box-shadow: 0 0 22px -4px rgba(150,80,240,.5);
+}
+
+.btn:active { transform: translateY(1px); }
+
+.foot {
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  letter-spacing: .5px;
+  color: #6b6178;
+}

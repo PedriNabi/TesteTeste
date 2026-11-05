@@ -1,0 +1,16 @@
+{
+  "name": "orbit-login",
+  "version": "1.0.0",
+  "description": "Portal de login do Orbit",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "create-user": "node scripts/create-user.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "nodemailer": "^10.3.1"
+  }
+}

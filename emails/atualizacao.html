@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Orbit — Novidades</title>
+</head>
+<!--
+  Template de e-mail do Orbit (notificação de atualização).
+  Como usar:
+    1. Troque {{LINK_PORTAL}} pela URL real do portal (ex.: https://orbit.suaescola.edu.br).
+    2. Troque {{NOME}} pelo nome do destinatário (ou remova a saudação personalizada).
+    3. Edite o bloco "O que mudou" com o texto da sua atualização.
+  Estilos ficam INLINE de propósito: clientes de e-mail (Gmail, Outlook) ignoram
+  CSS externo e grande parte de <style> no <head>.
+-->
+<body style="margin:0; padding:0; background:#0b1020; font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+
+  <!-- Pré-cabeçalho: texto de preview na caixa de entrada (fica oculto no corpo) -->
+  <div style="display:none; max-height:0; overflow:hidden; opacity:0;">
+    O Orbit foi atualizado — veja as novidades e acesse o portal.
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0b1020;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+
+        <!-- Container principal -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+               style="max-width:480px; width:100%; background:#121a33; border:1px solid #27335c; border-radius:16px; overflow:hidden;">
+
+          <!-- Cabeçalho / marca -->
+          <tr>
+            <td style="padding:28px 32px 8px;">
+              <span style="color:#7aa2ff; font-size:24px; vertical-align:middle;">&#9677;</span>
+              <span style="color:#eaf0ff; font-size:20px; font-weight:700; letter-spacing:0.3px; vertical-align:middle; margin-left:8px;">Orbit</span>
+            </td>
+          </tr>
+
+          <!-- Título -->
+          <tr>
+            <td style="padding:12px 32px 0;">
+              <h1 style="margin:0; color:#eaf0ff; font-size:24px; line-height:1.25;">
+                Novidades no portal
+              </h1>
+              <p style="margin:8px 0 0; color:#93a0c4; font-size:14px; line-height:1.5;">
+                Olá, {{NOME}} — fizemos uma atualização no Orbit.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Corpo / o que mudou -->
+          <tr>
+            <td style="padding:20px 32px 0;">
+              <p style="margin:0 0 14px; color:#eaf0ff; font-size:15px; line-height:1.6;">
+                O que mudou nesta versão:
+              </p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                     style="background:#0d1428; border:1px solid #27335c; border-radius:10px;">
+                <tr>
+                  <td style="padding:16px 18px; color:#eaf0ff; font-size:14px; line-height:1.6;">
+                    &bull; Descreva aqui a primeira novidade.<br>
+                    &bull; Descreva aqui a segunda novidade.<br>
+                    &bull; Descreva aqui a terceira novidade.
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Botão de ação (leva à página de login) -->
+          <tr>
+            <td style="padding:24px 32px 8px;" align="center">
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center"
+                      style="border-radius:10px; background:#5b8cff; background:linear-gradient(180deg,#7aa2ff,#5b8cff);">
+                    <a href="{{LINK_PORTAL}}"
+                       style="display:inline-block; padding:13px 28px; color:#ffffff; font-size:15px; font-weight:600; text-decoration:none; border-radius:10px;">
+                      Acessar o portal
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Link alternativo em texto -->
+          <tr>
+            <td style="padding:8px 32px 0;" align="center">
+              <p style="margin:0; color:#93a0c4; font-size:12px; line-height:1.5;">
+                Ou copie este endereço no navegador:<br>
+                <span style="color:#7aa2ff; word-break:break-all;">{{LINK_PORTAL}}</span>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Aviso de segurança -->
+          <tr>
+            <td style="padding:20px 32px 0;">
+              <p style="margin:0; color:#93a0c4; font-size:12px; line-height:1.5; border-top:1px solid #27335c; padding-top:16px;">
+                Por segurança, o Orbit nunca pede sua senha por e-mail e nunca a inclui
+                nesta mensagem. Digite suas credenciais somente na página de login do portal.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Rodapé -->
+          <tr>
+            <td style="padding:20px 32px 28px;" align="center">
+              <p style="margin:0; color:#5e6b92; font-size:12px; line-height:1.5;">
+                Portal interno &middot; acesso restrito<br>
+                Você recebeu este e-mail porque tem cadastro no Orbit.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Container -->
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+Assunto: Apresentação do meu projeto acadêmico — Orbit
+
+Prezado(a) Professor(a),
+
+Gostaria de apresentar um projeto pessoal que venho desenvolvendo como
+estudo, chamado Orbit. Trata-se de uma aplicação web feita em Node.js com
+Express, na qual venho praticando conceitos de desenvolvimento e de segurança
+da informação.
+
+O projeto é uma interface de portal com uma tela de acesso e uma animação de
+um planeta com um satélite em órbita. Meu foco de estudo atual tem sido o
+armazenamento seguro de senhas — estou implementando e comparando técnicas de
+hashing (como scrypt) para entender na prática por que senhas nunca devem ser
+guardadas em texto puro.
+
+Este e-mail é apenas uma apresentação do trabalho; não há nada a acessar nem
+nenhuma ação a realizar. Caso tenha interesse, terei prazer em demonstrar o
+projeto pessoalmente e receber sugestões.
+
+Agradeço desde já pela atenção.
+
+Atenciosamente,
+[Seu nome]
+[Seu RA / curso]
